@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/home','CrudController@create');
 Route::post('/save','CrudController@store');
 Route::get('/posts','CrudController@index');
@@ -24,4 +26,3 @@ Route::post('/posts/update','CrudController@update');
 Route::get('/posts/{id}/delete/','CrudController@destroy');
 Route::get('/contact','CrudController@contact');
 Route::get('/about', 'CrudController@about');
-
